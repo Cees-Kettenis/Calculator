@@ -1,0 +1,122 @@
+:root {
+  --calculatorColor: #424246;
+  --calculatorButtonColor: #615d66;
+  --calculatorButtonColorHover: #8d8992;
+  --calculatorClearButtonColor: #b25d7c;
+  --calculatorClearButtonColorHover: #e57b9a;
+  --calculatorScreenColor: #d8e3e2;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(52, 53, 65);
+}
+.none {
+  display: none !important;
+}
+.body-of-calculator {
+  padding: 1.5em;
+  width: 30vw;
+  height: 95vh;
+  background-color: var(--calculatorColor);
+  border-radius: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+.body-of-history {
+  width: fit-content;
+  padding: 1.5em;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.25);
+  background-color: var(--calculatorColor);
+  color: wheat;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 95vh;
+}
+.output-display {
+  border-radius: 20px 20px 0 0;
+  height: 20%;
+  width: 100%;
+  background-color: var(--calculatorScreenColor);
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: end;
+  padding: 10px;
+  flex-direction: column;
+}
+.output-display div {
+  font-size: 1.5em;
+}
+.squarebuttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24%;
+  aspect-ratio: 1;
+  font-size: 4em;
+  color: wheat;
+  background-color: var(--calculatorButtonColor);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.25);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.button:hover {
+  background-color: var(--calculatorButtonColorHover);
+  cursor: pointer;
+}
+.button.empty {
+  background-color: transparent;
+  box-shadow: none;
+}
+.button.clear {
+  background-color: var(--calculatorClearButtonColor);
+}
+.button.clear:hover {
+  background-color: var(--calculatorClearButtonColorHover);
+  cursor: pointer;
+}
+.button.toggle {
+  background-color: var(--calculatorButtonColorHover);
+  cursor: pointer;
+}
+.button.toggle:hover {
+  background-color: var(--calculatorButtonColor);
+  cursor: pointer;
+}
+.button.history {
+  font-size: 1.5em;
+  text-align: center;
+}
+.first,
+.second,
+.operator {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+@media (max-width: 1000px) and (min-width: 320px) {
+  .body-of-calculator {
+    width: 60vw;
+  }
+  .body-of-history {
+    width: 33vw;
+  }
+}
